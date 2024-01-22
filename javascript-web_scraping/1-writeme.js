@@ -5,6 +5,4 @@ const fileData = process.argv[3];
 
 fs.writeFile(filePath,fileData, 'utf-8', (err) => {
   if (err) throw err;
-
-  console.log(fileData.toString());
 }); 
