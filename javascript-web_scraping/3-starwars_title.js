@@ -9,7 +9,7 @@ request(apiurl, (error, response, body) => {
   if (error) {
     console.log(error);
   }
-    const movieData = JSON.parse(body);
-    console.log(movieData.title);
-  }
+  const movieData = JSON.parse(body);
+  console.log(movieData.title);
+}
 );
