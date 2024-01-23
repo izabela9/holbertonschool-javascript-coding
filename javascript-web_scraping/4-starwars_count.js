@@ -2,11 +2,11 @@
 const request = require('request');
 const process = require('process');
 
-request(process.argv[2], (error, response, body) => {
+request(process.argv[2], function(error, response, body) => {
   if (error) {
-    console.log(error);
+    console.error(error);
   } else {
-    const filmsData = JSON.parse(body);
+    const filmsData = JSON.parse(response.body);
     const newData = filmsData.results.filter((film) => {
       return film.characters.includes('https://swapi-api.hbtn.io/api/people/18/');
     });
